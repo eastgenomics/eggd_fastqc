@@ -1,0 +1,49 @@
+{
+  "name": "multi_fastqc",
+  "title": "multi_fastqc",
+  "summary": "Runs fastqc once for each input fastq",
+  "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "fastqs",
+      "label": "An array of fastq files",
+      "help": "",
+      "class": "array:file",
+      "patterns": ["*"],
+      "optional": false
+    },
+    {
+      "name": "output_path",
+      "label": "Path to contain output of fastqc sub-jobs",
+      "help": "",
+      "class": "string",
+      "patterns": ["*"],
+      "optional": false
+    }
+  ],
+  "runSpec": {
+    "execDepends": [
+    {"name": "openjdk-8-jre"}
+    ],
+    "interpreter": "bash",
+    "timeoutPolicy": {
+      "*": {
+        "hours": 3
+      }
+    },
+    "distribution": "Ubuntu",
+    "release": "16.04",
+    "version": "0",
+    "file": "src/code.sh"
+  },
+  "ignoreReuse": false,
+  "regionalOptions": {
+    "aws:eu-central-1": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem1_ssd1_v2_x2"
+        }
+      }
+    }
+  }
+}
