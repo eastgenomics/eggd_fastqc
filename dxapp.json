@@ -21,6 +21,26 @@
       "optional": false
     }
   ],
+  "outputSpec": [
+    {
+      "name": "report_html",
+      "label": "html fastqc reports (1 per input fastq)",
+      "class": "array:file",
+      "patterns": [
+        "*.html"
+      ],
+      "help": ""
+    },
+    {
+      "name": "stats_txt",
+      "label": "txt fastqc stats (1 per input fastq)",
+      "class": "array:file",
+      "patterns": [
+        "*.html"
+      ],
+      "help": ""
+    }
+  ],
   "runSpec": {
     "execDepends": [
     {"name": "openjdk-8-jre"}
