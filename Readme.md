@@ -1,8 +1,8 @@
 # eggd_fastqc
 
 ## fastqc
- Based on http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
-
+Based on http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+and the DNAnexus FastQC app (app-FZ68b180qjX8ZFVxGJ1Qg2vF)
 
 ## What does this app do?
 Runs fastqc for each fastq file submitted as input.

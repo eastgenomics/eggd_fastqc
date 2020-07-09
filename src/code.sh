@@ -115,11 +115,8 @@ main() {
     echo "Specifying output file"
     for job in ${fastqc_jobs[@]}
     do
-        echo $job
-        echo ${job}:report_html
-        echo ${job}:stats_txt
-        dx-jobutil-add-output report_html ${job}:report_html --class=array:jobref
-        dx-jobutil-add-output stats_txt ${job}:stats_txt --class=array:jobref
+        dx-jobutil-add-output report_htmls ${job}:report_html --class=array:jobref
+        dx-jobutil-add-output stats_txts ${job}:stats_txt --class=array:jobref
 
     done
 }
