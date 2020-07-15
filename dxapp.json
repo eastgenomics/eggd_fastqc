@@ -1,8 +1,12 @@
 {
-  "name": "multi_fastqc",
-  "title": "multi_fastqc",
+  "name": "multi_fastqc_v1.0.0",
+  "title": "multi_fastqc_v1.0.0",
   "summary": "Runs fastqc once for each input fastq",
   "dxapi": "1.0.0",
+  "version": "1.0.0",
+  "properties": {
+    "githubRelease": "v1.0.0"
+  },
   "inputSpec": [
     {
       "name": "fastqs",
