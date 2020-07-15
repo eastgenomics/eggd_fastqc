@@ -1,0 +1,65 @@
+{
+  "name": "multi_fastqc_v1.0.0",
+  "title": "multi_fastqc_v1.0.0",
+  "summary": "Runs fastqc once for each input fastq",
+  "dxapi": "1.0.0",
+  "version": "1.0.0",
+  "properties": {
+    "githubRelease": "v1.0.0"
+  },
+  "inputSpec": [
+    {
+      "name": "fastqs",
+      "label": "An array of fastq files",
+      "help": "",
+      "class": "array:file",
+      "patterns": ["*.fastq.gz", "*.fq.gz"],
+      "optional": false
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "report_htmls",
+      "label": "html fastqc reports (1 per input fastq)",
+      "class": "array:file",
+      "patterns": [
+        "*.html"
+      ],
+      "help": ""
+    },
+    {
+      "name": "stats_txts",
+      "label": "txt fastqc stats (1 per input fastq)",
+      "class": "array:file",
+      "patterns": [
+        "*.html"
+      ],
+      "help": ""
+    }
+  ],
+  "runSpec": {
+    "execDepends": [
+    {"name": "openjdk-8-jre"}
+    ],
+    "interpreter": "bash",
+    "timeoutPolicy": {
+      "*": {
+        "hours": 3
+      }
+    },
+    "distribution": "Ubuntu",
+    "release": "16.04",
+    "version": "0",
+    "file": "src/code.sh"
+  },
+  "ignoreReuse": false,
+  "regionalOptions": {
+    "aws:eu-central-1": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem1_ssd1_v2_x2"
+        }
+      }
+    }
+  }
+}
