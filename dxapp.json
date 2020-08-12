@@ -15,6 +15,54 @@
       "class": "array:file",
       "patterns": ["*.fastq.gz", "*.fq.gz"],
       "optional": false
+    },
+    {
+      "name": "contaminants_txt",
+      "label": "Custom contaminants",
+      "help": "(Optional) A special file containing custom contaminant sequences to screen overrepresented sequences against. If left empty, a default set of contaminants that comes with the FastQC package will be used. If provided, this file must be a text file with two tab-delimited columns: name (such as 'Truseq Adapter') and DNA sequence (such as 'TATCTCGTATG').",
+      "class": "file",
+      "patterns": ["*.fastqc_contaminants.txt"],
+      "optional": true
+    },
+    {
+      "name": "adapters_txt",
+      "label": "Custom adapters",
+      "help": "(Optional) A special file containing custom adapter sequences which will be explicity searched against the library. If left empty, a default set of adapters that comes with the FastQC package will be used. If provided, this file must be a text file with two tab-delimited columns: name (such as 'Nextera Transposase Sequence') and DNA sequence (such as 'CTGTCTCTTATA').",
+      "class": "file",
+      "patterns": ["*.fastqc_adapters.txt"],
+      "optional": true
+    },
+    {
+      "name": "limits_txt",
+      "label": "Custom limits",
+      "help": "(Optional) A special file containing a set of criteria which will be used to determine the warn/error limits for the various modules, or selectively remove some modules from the output altogether. For an example of a limits file, refer to the limits.txt file in the FastQC sources.",
+      "class": "file",
+      "patterns": ["*.fastqc_limits.txt"],
+      "optional": true
+    },
+    {
+      "name": "kmer_size",
+      "label": "Kmer size",
+      "help": "The kmer size that the kmer analysis module will use. This module reports overrepresented k-mers (sequences of size 'k'). This size must be between 2 and 10 (default is 7).",
+      "class": "int",
+      "default": 7,
+      "group": "Advanced"
+    },
+    {
+      "name": "nogroup",
+      "label": "Disable grouping of bases past 50bp?",
+      "help": "Disable grouping of bases for reads >50bp. All reports will show data for every base in the read. WARNING: Using this option may cause fastqc to slow down or crash if used on really long reads, and resulting plots may be too large for practical viewing.",
+      "class": "boolean",
+      "default": true,
+      "group": "Advanced"
+    },
+    {
+      "name": "extra_options",
+      "label": "Extra command-line options",
+      "help": "(Optional) Extra command-line options that will be passed directly to the fastqc invocation. Example: --nofilter.",
+      "class": "string",
+      "optional": true,
+      "group": "Advanced"
     }
   ],
   "outputSpec": [
