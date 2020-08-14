@@ -28,5 +28,3 @@ The parent job runs the main() function which submits one subjob for each input 
 
 ## What are the limitations of this app?
 Optional fastqc inputs (e.g. kmer size, contaminants, adapters) are handled within code.sh but have not been implemented within dxapp.json. This functionality will be restored in a future version. 
-
-## This app was adapted from Viapath Genome Informatics
