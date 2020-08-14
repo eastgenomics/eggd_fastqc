@@ -40,7 +40,6 @@ dx cat "$reads" | zcat | /FastQC/fastqc --extract -t $(nproc) -k "${kmer_size}" 
 #
 # Upload results
 #
-#mark-section "uploading results"
 
 mkdir -p ~/out/report_html/ ~/out/stats_txt/
 mv results/*/fastqc_report.html ~/out/report_html/"$reads_prefix".stats-fastqc.html
@@ -51,8 +50,6 @@ dx-jobutil-add-output report_html "${report_html}" --class=file
 
 stats_txt=$(dx upload /home/dnanexus/out/stats_txt/${reads_prefix}.stats-fastqc.txt --brief)
 dx-jobutil-add-output stats_txt "${stats_txt}" --class=file
-
-#mark-success
 
 }
 
