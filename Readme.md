@@ -1,6 +1,5 @@
 # eggd_fastqc
 
-## fastqc
 Based on http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 and the DNAnexus FastQC app (app-FZ68b180qjX8ZFVxGJ1Qg2vF)
 
