@@ -1,6 +1,6 @@
 {
-  "name": "eggd_fastqc_v1.2.0",
-  "title": "eggd_fastqc_v1.2.0",
+  "name": "eggd_fastqc",
+  "title": "eggd_fastqc",
   "summary": "Runs fastqc once for each input fastq",
   "dxapi": "1.0.0",
   "version": "1.2.0",
