@@ -1,8 +1,10 @@
 # eggd_fastqc
 
-## fastqc
 Based on http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 and the DNAnexus FastQC app (app-FZ68b180qjX8ZFVxGJ1Qg2vF)
+
+## Version
+eggd_fastqc v1.2.0 uses FastQC v0.12.1 
 
 ## What does this app do?
 Runs fastqc for each fastq file submitted as input.
@@ -14,7 +16,7 @@ Quality control for NGS reads
 ## What data are required for this app to run?
 
 Input files:
-1. fastqs - An array of fastq files ( .fastq.gz | fq.gz )
+1. `fastqs` - An array of fastq files ( .fastq.gz | fq.gz )
 
 ## What does this app output?
 
